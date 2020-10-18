@@ -19,7 +19,7 @@ keyboard.add_button(Text(label="Сегодня"), color="primary")
 keyboard.add_button(Text(label="Завтра"), color="positive")
 
 
-@bot.on.message(text=['клаву', '-к', 'клавиатуру, пожалуйста'], lower=True)
+@bot.on.message(text=['клаву', '-к','-k','клавиатуру, пожалуйста'], lower=True)
 async def wrapper(ans: Message):
     await ans('Держите.', keyboard=keyboard.generate())
 
