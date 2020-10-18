@@ -9,7 +9,6 @@ from student import Student
 ASIA = timezone('Asia/Yekaterinburg')
 
 token = os.environ['TOKEN']
-# token = "19810903dc0736b664213ae9afba923c82cdbec418759822472975aa20d9bea82771775b4dc5f575d9a8d"
 bot = Bot(token)
 
 keyboard = Keyboard(one_time=False)
@@ -19,7 +18,7 @@ keyboard.add_button(Text(label="Сегодня"), color="primary")
 keyboard.add_button(Text(label="Завтра"), color="positive")
 
 
-@bot.on.message(text=['клаву', '-к','-k','клавиатуру, пожалуйста'], lower=True)
+@bot.on.message(text=['клаву', '-к', '-k', 'клавиатуру, пожалуйста'], lower=True)
 async def wrapper(ans: Message):
     await ans('Держите.', keyboard=keyboard.generate())
 
