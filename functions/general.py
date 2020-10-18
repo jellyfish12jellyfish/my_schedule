@@ -5,16 +5,7 @@ def show(list_of_subjects, n, day, subgroup):
     week_days = {0: 'Понедельник', 1: 'Вторник', 2: 'Среда',
                  3: 'Четверг', 4: 'Пятница', 5: 'Суббота', 6: 'Воскресенье'}
 
-    return f'''
-            {subgroup}
-            
-            {week_days[day]}:
-            {list_of_subjects[n][0]}
-            {list_of_subjects[n][1]}
-            {list_of_subjects[n][2]}
-            {list_of_subjects[n][3]}
-            {list_of_subjects[n][4]}
-            '''
+    return f'''{subgroup}\n\n{week_days[day]}:\n{list_of_subjects[n][0]}\n{list_of_subjects[n][1]}\n{list_of_subjects[n][2]}\n{list_of_subjects[n][3]}\n{list_of_subjects[n][4]}\n'''
 
 
 def get_subjects(today, n, subgroup):
