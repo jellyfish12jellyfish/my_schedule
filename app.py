@@ -1,5 +1,5 @@
 from datetime import *
-
+import os
 from pytz import timezone
 from vkbottle import Bot, Message
 from vkbottle.keyboard import Keyboard, Text
@@ -8,8 +8,8 @@ from student import Student
 
 ASIA = timezone('Asia/Yekaterinburg')
 
-# token = os.environ['token']
-token = "19810903dc0736b664213ae9afba923c82cdbec418759822472975aa20d9bea82771775b4dc5f575d9a8d"
+token = os.environ['TOKEN']
+# token = "19810903dc0736b664213ae9afba923c82cdbec418759822472975aa20d9bea82771775b4dc5f575d9a8d"
 bot = Bot(token)
 
 keyboard = Keyboard(one_time=False)
