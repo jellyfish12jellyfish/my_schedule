@@ -69,7 +69,8 @@ async def get_tomorrow_schedule(ans: Message):
 
         student = Student(ans.from_id)
         student.today = (datetime.today().now(ASIA) + timedelta(days=1)).weekday()
-        student.week_num = (datetime.today().now(ASIA) + timedelta(days=7)).strftime("%U")
+        # student.week_num = (datetime.today().now(ASIA) + timedelta(days=7)).strftime("%U")
+        student.week_num = (date.today() + timedelta(days=7)).isocalendar()[1]
 
         return student.get_schedule()
 
