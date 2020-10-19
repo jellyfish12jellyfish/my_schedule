@@ -14,8 +14,9 @@ class Student:
         self.week_num = date.today().isocalendar()[1]
 
     def get_schedule(self):
+        print(self.today, self.week_num)
 
-        if int(self.week_num) % 2 != 0:
+        if int(self.week_num) % 2 == 0:
             if self.id in FIRST_SUBGROUP:
                 return get_subjects(self.today, N1, subgroup='Числитель - 1 подгруппа')
             elif self.id in SECOND_SUBGROUP:
