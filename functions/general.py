@@ -39,4 +39,4 @@ def get_subjects(today, n, subgroup):
 
         # sunday or error
         else:
-            return f'''Занятия не найдены.\n\nСкорее всего, сегодня - воскресенье.'''
+            return f'''Воскресенье: выходной день :)'''
