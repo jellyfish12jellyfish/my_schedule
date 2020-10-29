@@ -53,9 +53,7 @@ async def wrapper(ans: Message):
 @bot.on.message(text=["расписание", "Сегодня"], lower=True)
 async def get_today_schedule(ans: Message):
     try:
-
         student = Student(ans.from_id)
-
         return student.get_schedule()
 
     except Exception as ex:
@@ -66,7 +64,6 @@ async def get_today_schedule(ans: Message):
 @bot.on.message(text=["Завтра"], lower=True)
 async def get_tomorrow_schedule(ans: Message):
     try:
-
         student = Student(ans.from_id)
         student.today = (datetime.today().now(ASIA) + timedelta(days=1)).weekday()
         # student.week_num = (datetime.today().now(ASIA) + timedelta(days=1)).strftime("%U")
