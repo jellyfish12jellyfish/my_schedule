@@ -5,7 +5,6 @@ from functions.general import *
 
 ASIA = timezone('Asia/Yekaterinburg')
 
-
 class Student:
 
     def __init__(self, student_id):
@@ -16,6 +15,7 @@ class Student:
     def get_schedule(self):
         error = "Вы не состоите в списке студентов :("
         if int(self.week_num) % 2 == 0:
+
             if self.id in FIRST_SUBGROUP:
                 args = [N1, 'Числитель - 1 подгруппа']
             elif self.id in SECOND_SUBGROUP:
