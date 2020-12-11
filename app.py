@@ -10,7 +10,7 @@ from student import Student
 ASIA = timezone('Asia/Yekaterinburg')
 
 USERS_IDS = cfg.FIRST_SUBGROUP + cfg.SECOND_SUBGROUP
-WHITE_LIST = [443285989, 497524684, 236635200, 306226901]
+WHITE_LIST = cfg.WHITE_LIST
 
 token = os.environ['TOKEN']
 bot = Bot(token)

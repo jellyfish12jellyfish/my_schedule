@@ -5,6 +5,7 @@ from functions.general import *
 
 ASIA = timezone('Asia/Yekaterinburg')
 
+
 class Student:
 
     def __init__(self, student_id):
